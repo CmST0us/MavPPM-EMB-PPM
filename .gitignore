@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+#CMake
+build/*
+vendor/build/*
+*.DS_Store
+
