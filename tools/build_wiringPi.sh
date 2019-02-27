@@ -14,6 +14,7 @@ make uninstall
 make clean
 
 make CROSS_COMPILE=$CROSS_COMPILE static
-make install
+make install-static
+
 
 
