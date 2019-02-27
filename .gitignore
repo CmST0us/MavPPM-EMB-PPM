@@ -35,4 +35,5 @@
 build/*
 vendor/build/*
 *.DS_Store
-
+cmake-build*
+.idea*
