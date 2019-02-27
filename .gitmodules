@@ -1,0 +1,3 @@
+[submodule "vendor/WiringNP"]
+	path = vendor/WiringNP
+	url = https://github.com/CmST0us/WiringNP.git
