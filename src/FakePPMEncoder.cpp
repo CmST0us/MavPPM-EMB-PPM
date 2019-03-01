@@ -7,26 +7,34 @@
 using namespace ppm;
 
 
-FakePPMEncoderr::FakePPMEncoderr() {
+FakePPMEncoder::FakePPMEncoder() {
 
 }
 
-FakePPMEncoderr::~FakePPMEncoderr() {
+FakePPMEncoder::~FakePPMEncoder() {
 
 }
 
-int FakePPMEncoderr::maxChannelCount() const {
+bool FakePPMEncoder::setup() {
+    return false;
+}
+
+int FakePPMEncoder::maxChannelCount() const {
     return 0;
 }
 
-void FakePPMEncoderr::writeValue(int channel, int value) {
+void FakePPMEncoder::writeValue(int channel, int value) {
 
 }
 
-int FakePPMEncoderr::minChannelValue() const {
+int FakePPMEncoder::readValue(int channel) const {
     return 0;
 }
 
-int FakePPMEncoderr::maxChannelValue() const {
+int FakePPMEncoder::minChannelValue() const {
+    return 0;
+}
+
+int FakePPMEncoder::maxChannelValue() const {
     return 0;
 }

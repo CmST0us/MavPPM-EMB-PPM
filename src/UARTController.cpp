@@ -20,6 +20,10 @@ UARTController::UARTController(const char *device, const int bandrate) : _device
     _fd = -1;
 }
 
+UARTController::~UARTController() {
+    close();
+}
+
 bool UARTController::open() {
     struct termios options ;
     speed_t myBaud ;

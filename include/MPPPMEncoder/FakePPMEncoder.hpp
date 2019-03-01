@@ -8,12 +8,14 @@
 
 namespace ppm {
 
-class FakePPMEncoderr final : public IPPMEncoder {
+class FakePPMEncoder final : public IPPMEncoder {
 public:
-    FakePPMEncoderr();
-    virtual ~FakePPMEncoderr();
+    FakePPMEncoder();
+    virtual ~FakePPMEncoder();
+    virtual bool setup() override;
     virtual int maxChannelCount() const override;
     virtual void writeValue(int channel, int value) override;
+    virtual int readValue(int channel) const override;
 
     virtual int maxChannelValue() const override;
     virtual int minChannelValue() const override;
