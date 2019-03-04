@@ -50,7 +50,8 @@ void UARTPPMEncoder::writeValue(int channel, int value) {
     _uartController->putChar(0x0F);
     // data
     for(int i = 0; i < UARTPPMEncoder::MAX_CHANNEL_COUNT; ++i) {
-        _uartController->putChar(_channelValue[i] / 10);
+    // (v - 400): UART to PPM IC FIX
+        _uartController->putChar((_channelValue[i] - 400) / 10);
     }
     //end code
     _uartController->putChar(0x00);
