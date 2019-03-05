@@ -1,5 +1,5 @@
 #!/bin/bash
-CURRENT_DIR=`pwd`
+CURRENT_DIR=$(cd "$(dirname "${BASH_SOURCE-$0}")"; pwd)
 SRC_ROOT=$CURRENT_DIR/../
 CROSS_COMPILE=arm-none-linux-gnueabihf-
 WIRING_NP_DIR=$SRC_ROOT/vendor/WiringNP
@@ -15,6 +15,9 @@ make clean
 
 make CROSS_COMPILE=$CROSS_COMPILE static
 make install-static
+
+cp $SRC_ROOT/vendor/build/include/* $SRC_ROOT/../Vendor/build/include
+cp $SRC_ROOT/vendor/build/lib/libwiringPi.a $SRC_ROOT/../Vendor/build/lib
 
 
 
