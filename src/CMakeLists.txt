@@ -1,21 +1,17 @@
 cmake_minimum_required(VERSION 3.0)
 
 # Options
-option(BUILD_WIRING_PI "Build WiringPi" OFF)
-if (NOT DEFINED BUILD_WIRING_PI)
-    set(BUILD_WIRING_PI OFF)
+option(BUILD_FOR_EMB "Build For EMB Device" OFF)
+if (NOT DEFINED BUILD_FOR_EMB)
+    set(BUILD_FOR_EMB OFF)
 endif()
 
 # Source
 aux_source_directory(. mavppm_ppmencoder_source)
 
 
-if (BUILD_WIRING_PI STREQUAL "ON")
+if (BUILD_FOR_EMB STREQUAL "ON")
     aux_source_directory(./bsp mavppm_ppmencoder_source_bsp)
-    execute_process(
-        COMMAND
-        ../tools/build_wiringPi.sh
-    )
 endif()
 
 link_directories(../vendor/build/lib)

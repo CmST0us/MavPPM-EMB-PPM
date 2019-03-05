@@ -16,8 +16,3 @@ make clean
 make CROSS_COMPILE=$CROSS_COMPILE static
 make install-static
 
-cp $SRC_ROOT/vendor/build/include/* $SRC_ROOT/../Vendor/build/include
-cp $SRC_ROOT/vendor/build/lib/libwiringPi.a $SRC_ROOT/../Vendor/build/lib
-
-
-
