@@ -50,7 +50,7 @@ install(
 ## Install Header
 install(
     DIRECTORY
-        ../include/libSocketKit
+        ../include/MPPPMEncoder
     DESTINATION
         include
 )
