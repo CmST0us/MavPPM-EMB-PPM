@@ -1,7 +1,7 @@
 #!/bin/bash
 CURRENT_DIR=$(cd "$(dirname "${BASH_SOURCE-$0}")"; pwd)
 SRC_ROOT=$CURRENT_DIR/../
-CROSS_COMPILE=arm-linux-gnueabihf-
+CROSS_COMPILE=arm-none-linux-gnueabihf-
 WIRING_NP_DIR=$SRC_ROOT/vendor/WiringNP
 
 # init submodule
