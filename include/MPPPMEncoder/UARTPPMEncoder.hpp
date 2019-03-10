@@ -29,6 +29,7 @@ public:
     virtual bool setup() override;
     virtual int maxChannelCount() const override;
     virtual void writeValue(int channel, int value) override;
+    virtual void writeValue(int channel[], int value[], int count) override;
     virtual int readValue(int channel) const override ;
 
     virtual int maxChannelValue() const override;
@@ -38,6 +39,7 @@ private:
     std::shared_ptr<UARTController> _uartController{nullptr};
     int _channelValue[kUARTPPMEncoderMaxChannelCount];
 
+    void update();
 };
 
 }

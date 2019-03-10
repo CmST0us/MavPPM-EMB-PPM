@@ -26,7 +26,9 @@ int FakePPMEncoder::maxChannelCount() const {
 void FakePPMEncoder::writeValue(int channel, int value) {
 
 }
+void FakePPMEncoder::writeValue(int *channel, int *value, int count) {
 
+}
 int FakePPMEncoder::readValue(int channel) const {
     return 0;
 }
