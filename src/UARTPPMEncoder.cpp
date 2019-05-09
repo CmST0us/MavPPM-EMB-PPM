@@ -65,7 +65,7 @@ void UARTPPMEncoder::writeValue(int *channel, int *value, int count) {
         if (channelNum > maxChannelCount() - 1) {
             channelNum = maxChannelCount() - 1;
         } else if (channelNum < 0) {
-            channelNum = 0;
+            continue;
         }
 
         if (channelValue > maxChannelValue()) {
